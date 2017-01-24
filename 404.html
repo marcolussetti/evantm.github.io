@@ -27,15 +27,55 @@ permalink: /404.html
     }
 
     @keyframes background {
-        0% { background-color: #f99; }
-        33% { background-color: #9f9; }
-        67% { background-color: #99f; }
-        100% { background-color: #f99; }
+        0% { background-color: #f99; color: #ff9;}
+        33% { background-color: #ff9; color: #99f;}
+        67% { background-color: #99f; color: #f99;}
+        100% { background-color: #f99; color: #ff9;}
+    }
+
+    marquee {
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 1000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: spin;
+        -moz-animation-duration: 1000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -ms-animation-name: spin;
+        -ms-animation-duration: 1000ms;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: linear;
+
+        animation-name: spin;
+        animation-duration: 10000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @-ms-keyframes spin {
+        from { -ms-transform: rotate(0deg); }
+        to { -ms-transform: rotate(360deg); }
+    }
+    @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
     }
 </style>
 <marquee class="hover" direction="down" width="100%" height="100%" behavior="alternate" style="border:none">
-    <marquee behavior="alternate" style="font-size:400%;">
-        This is a 404!
+    <marquee behavior="alternate" style="font-size:600%;">
+        404!
     </marquee>
 </marquee>
 
