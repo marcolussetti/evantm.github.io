@@ -7,6 +7,37 @@ permalink: /404.html
     <title>404</title>
 </head>
 <body>
-This is a 404
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        -webkit-animation: background 1s cubic-bezier(1,0,0,1) infinite;
+        animation: background 1s cubic-bezier(1,0,0,1) infinite;
+    }
+
+
+    @-webkit-keyframes background {
+        0% { background-color: #f99; }
+        33% { background-color: #9f9; }
+        67% { background-color: #99f; }
+        100% { background-color: #f99; }
+    }
+
+    @keyframes background {
+        0% { background-color: #f99; }
+        33% { background-color: #9f9; }
+        67% { background-color: #99f; }
+        100% { background-color: #f99; }
+    }
+</style>
+<marquee class="hover" direction="down" width="100%" height="100%" behavior="alternate" style="border:none">
+    <marquee behavior="alternate" style="font-size:400%;">
+        This is a 404!
+    </marquee>
+</marquee>
+
 </body>
 </html>
